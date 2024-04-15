@@ -2,7 +2,7 @@ package exemplos.Predicate;
 
 import java.util.Arrays;
 import java.util.List;
-import java.util.function.Predicate;
+
 // Representa uma função que aceita argumento do tipo T e retorna um valor do tipo boolean.
 // É comumente usada para filtrar os elementos do Stream com base em alguma condição.
 
