@@ -16,6 +16,15 @@ public class PredicateExemple {
 
 
         //usar o Stream para filtrar as palavras que tem mais de 5 caracteres e imprimir.
-        palavras.stream().filter(maisDeCincoCaracteres).forEach(System.out::println);
+        palavras.stream().filter(
+            new Predicate<String>(){
+
+                @Override
+                public boolean test(String p) {
+                    return p.length() > 5;
+                }
+            }
+
+        ).forEach(System.out::println);
     }
 }
