@@ -12,19 +12,10 @@ public class PredicateExemple {
         List<String> palavras = Arrays.asList("Java", "JavaScript", "Kotlyn", "Python", "C", "Ruby", "C#");
 
         //cria um predicate que verifica se a palavra tem ais de 5 caracteres
-        Predicate<String> maisDeCincoCaracteres = palavra -> palavra.length() > 5;
+        // Predicate<String> maisDeCincoCaracteres = palavra -> palavra.length() > 5;
 
 
         //usar o Stream para filtrar as palavras que tem mais de 5 caracteres e imprimir.
-        palavras.stream().filter(
-            new Predicate<String>(){
-
-                @Override
-                public boolean test(String p) {
-                    return p.length() > 5;
-                }
-            }
-
-        ).forEach(System.out::println);
+        palavras.stream().filter(p -> p.length() > 5).forEach(System.out::println);
     }
 }
